@@ -6,17 +6,17 @@ Resource Mapping Json:
 
 ```json
 {
-  "packageId": "meeting",
+  "packageId": "testId",
   "items": [
     {
-      "packageId": "meeting",
+      "packageId": "testId",
       "version": 1,
       "remoteUrl": "http://192.168.88.88:5000/js/app.630f02ab.js",
       "path": "js/app.630f02ab.js",
       "mimeType": "application/javascript"
     },
     {
-      "packageId": "meeting",
+      "packageId": "testId",
       "version": 1,
       "remoteUrl": "http://192.168.88.88:5000/js/chunk-vendors.dca9c05a.js",
       "path": "js/chunk-vendors.dca9c05a.js",
@@ -25,16 +25,11 @@ Resource Mapping Json:
   ]
 }
 ```
+
 ## Usage
 
 ```bash
-npm install webpack-plugin-offline-package -D
-```
-
-or
-
-```bash
-yarn add webpack-plugin-offline-package -D
+ pnpm add webpack-plugin-offline-package -D
 ```
 
 Via `webpack.config.js` or any other webpack config file.
@@ -43,12 +38,12 @@ Via `webpack.config.js` or any other webpack config file.
 {
   plugins: [
     new OfflinePackagePlugin({
-      packageNameKey: 'packageId',
-      packageNameValue: 'meeting',
+      packageNameKey: "packageId",
+      packageNameValue: "testId",
       version: 1,
-      baseUrl: 'http://192.168.88.88:5000/',
-      fileTypes: ['js', 'css', 'png']
-    })
+      baseUrl: "https://xxxx.domain.com/",
+      fileTypes: ["html", "js", "css", "png"],
+    }),
   ];
 }
 ```
@@ -65,7 +60,7 @@ Resource mapping json:
 
 ```js
 {
-  "packageId": "meeting",
+  "packageId": "testId",
   "items": [
     ...
   ]
@@ -80,8 +75,8 @@ Config example:
 {
   plugins: [
     new OfflinePackagePlugin({
-      packageNameKey: 'packageId'
-    })
+      packageNameKey: "packageId",
+    }),
   ];
 }
 ```
@@ -94,7 +89,7 @@ Resource mapping json:
 
 ```js
 {
-  "packageNameValue": "meeting",
+  "packageNameValue": "testId",
   "items": [
     ...
   ]
@@ -109,8 +104,8 @@ Config example:
 {
   plugins: [
     new OfflinePackagePlugin({
-      packageNameValue: 'meeting'
-    })
+      packageNameValue: "testId",
+    }),
   ];
 }
 ```
@@ -139,8 +134,8 @@ Config example:
 {
   plugins: [
     new OfflinePackagePlugin({
-      version: 2
-    })
+      version: 2,
+    }),
   ];
 }
 ```
@@ -157,8 +152,8 @@ Config example:
 {
   plugins: [
     new OfflinePackagePlugin({
-      folderName: 'package'
-    })
+      folderName: "package",
+    }),
   ];
 }
 ```
@@ -175,8 +170,8 @@ Config example:
 {
   plugins: [
     new OfflinePackagePlugin({
-      indexFileName: 'index.json'
-    })
+      indexFileName: "index.json",
+    }),
   ];
 }
 ```
@@ -192,8 +187,8 @@ Resource mapping json:
   ...
   "items": [
     {
-      "remoteUrl": `${baseUrl}/about.9d81a00f.js`,
-      "path": "js/about.9d81a00f.js"
+      "remoteUrl": `${baseUrl}/js/app.xxxx.js`,
+      "path": "js/app.xxxx.js"
     }
   ]
 }
@@ -207,8 +202,8 @@ Config example:
 {
   plugins: [
     new OfflinePackagePlugin({
-      indexFileName: 'index.json'
-    })
+      indexFileName: "index.json",
+    }),
   ];
 }
 ```
@@ -225,8 +220,8 @@ Config example:
 {
   plugins: [
     new OfflinePackagePlugin({
-      fileTypes: ['js', 'css', 'png']
-    })
+      fileTypes: ["html", "js", "css", "png"],
+    }),
   ];
 }
 ```
@@ -243,8 +238,8 @@ Config example:
 {
   plugins: [
     new OfflinePackagePlugin({
-      excludeFileName: ['main.js']
-    })
+      excludeFileName: ["main.js"],
+    }),
   ];
 }
 ```
