@@ -1,4 +1,4 @@
-# offline-package-webpack-plugin
+# webpack-plugin-offline-package
 
 This plugin helps compress static resources (such as js, css, png...) into a zip package, with a resource mapping json file in it.
 
@@ -25,20 +25,16 @@ Resource Mapping Json:
   ]
 }
 ```
-
-Related article:
-[Hybrid App 离线包方案实践](https://github.com/mcuking/blog/issues/63)
-
 ## Usage
 
 ```bash
-npm install offline-package-webpack-plugin -D
+npm install webpack-plugin-offline-package -D
 ```
 
 or
 
 ```bash
-yarn add offline-package-webpack-plugin -D
+yarn add webpack-plugin-offline-package -D
 ```
 
 Via `webpack.config.js` or any other webpack config file.
@@ -255,10 +251,4 @@ Config example:
 
 ## Inspiration
 
-[webpack-manifest-plugin](https://github.com/danethurber/webpack-manifest-plugin)
-
-## Supplement
-
-The image below is the architecture of offline package. You could learn more about offline package via [mobile-web-best-practice](https://github.com/mcuking/mobile-web-best-practice#%E7%A6%BB%E7%BA%BF%E5%8C%85).
-
-<img src="./assets/offline-architecture.png" width=600/>
+[offline-package-webpack-plugin](https://github.com/mcuking/offline-package-webpack-plugin)

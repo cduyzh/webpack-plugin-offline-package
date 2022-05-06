@@ -1,7 +1,7 @@
 {
-  "name": "offline-package-webpack-plugin",
-  "version": "0.1.9",
-  "description": "offline-package-webpack-plugin",
+  "name": "webpack-plugin-offline-package",
+  "version": "1.0.0",
+  "description": "webpack-plugin-offline-package",
   "main": "index.js",
   "files": [
     "index.js",
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mcuking/offline-package-webpack-plugin.git"
+    "url": "git+https://github.com/cduyzh/webpack-plugin-offline-package.git"
   },
-  "author": "mcuking",
+  "author": "cduyzh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mcuking/offline-package-webpack-plugin/issues"
+    "url": "https://github.com/cduyzh/webpack-plugin-offline-package/issues"
   },
-  "homepage": "https://github.com/mcuking/offline-package-webpack-plugin#readme"
+  "homepage": "https://github.com/cduyzh/webpack-plugin-offline-package#readme"
 }
